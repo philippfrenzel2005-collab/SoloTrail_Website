@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SoloTrail ist ein früher Wander-Tracker-Prototyp für private GPS-Aufzeichnung, barometrische Höhendaten und MicroSD-Logging ohne Smartphone-Abhängigkeit.">
+  <meta name="description" content="SoloTrail entwickelt einen eigenständigen Wander-Tracker für lokale GPS-Aufzeichnung, barometrische Höhendaten und private Touranalyse ohne Smartphone-Zwang.">
   <title>SoloTrail | Privater Wander-Tracker Prototyp</title>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -15,6 +15,7 @@
     </a>
     <nav class="site-nav" aria-label="Hauptnavigation">
       <a href="#prototype">Vision</a>
+      <a href="#privacy">Privacy</a>
       <a href="#firmware">Firmware</a>
       <a href="#roadmap">Ausblick</a>
     </nav>
@@ -26,13 +27,19 @@
         <p class="eyebrow">Privater Wander-Tracker in Entwicklung</p>
         <h1 id="hero-title">Wandern ohne Handy-Zwang</h1>
         <p class="hero-text">
-          SoloTrail ist ein eigenständiges Konzept für alle, die ihre Route,
-          Höhenmeter und Bewegungsdaten aufzeichnen möchten, ohne unterwegs dauerhaft
-          vom Smartphone, Cloud-Konten oder Tracking-Apps abhängig zu sein.
+          SoloTrail entwickelt einen eigenständigen GPS-Tracker für Wanderungen. Das Gerät zeichnet Route,
+          Höhenmeter und Bewegungsdaten lokal auf — ohne Smartphone-Zwang, ohne Cloud-Konto und ohne
+          automatischen Upload sensibler Standortdaten.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="#firmware">Geplante Specs</a>
-          <a class="button secondary" href="#roadmap">Entwicklung ansehen</a>
+          <a class="button primary" href="#firmware">Technologie ansehen</a>
+          <a class="button secondary" href="#roadmap">Roadmap ansehen</a>
+        </div>
+
+        <div class="hero-meta" aria-label="SoloTrail Schwerpunkte">
+          <span>Lokal gespeichert</span>
+          <span>Ohne Handy beim Tracking</span>
+          <span>Tourbereit geplant</span>
         </div>
       </div>
 
@@ -71,16 +78,49 @@
         </article>
         <article>
           <h3>Unabhängig vom Handy</h3>
-          <p>SoloTrail loggt auch dann wenn das Smartphone im Rucksack bleibt, Akku sparen muss oder auf der Tour bewusst Pause hat.</p>
+          <p>SoloTrail soll auch dann weiter aufzeichnen, wenn das Smartphone im Rucksack bleibt, Akku sparen muss oder auf der Tour bewusst Pause hat.</p>
         </article>
         <article>
-          <h3>Webapp</h3>
-          <p>SoloTrail verarbeitet aufgezeichnete GPS-Daten lokal im Browser und visualisiert Route, Distanz und Dauer — ohne Cloud-Upload oder Externen Diensten.</p>
+          <h3>Transparenter Entwicklungsstatus</h3>
+          <p>SoloTrail befindet sich in der Prototypenphase. Der Fokus liegt auf technischer Validierung, Testlogs und klaren Produktentscheidungen vor einer möglichen Weiterentwicklung.</p>
         </article>
         <article>
-          <h3>Webapp</h3>
-          <p>SoloTrail ist Spritzwassergeschützt und Stoßfest und hält jeder Wanderung stand</p>
+          <h3>Robustes Zielbild</h3>
+          <p>Geplant ist ein kompaktes, spritzwassergeschütztes Gehäuse, das später unter realen Tourbedingungen validiert wird.</p>
         </article>
+      </div>
+    </section>
+
+    <section id="privacy" class="section split">
+      <div>
+        <p class="eyebrow">Privacy by design</p>
+        <h2>Deine Route bleibt bei dir</h2>
+        <p>
+          SoloTrail speichert Tourdaten lokal auf dem Gerät. Die Web-App visualisiert und analysiert
+          exportierte GPS-Daten direkt im Browser — ohne Cloud-Upload und ohne Übertragung sensibler
+          Standortdaten an externe Server.
+        </p>
+      </div>
+      <div class="spec-panel">
+        <p class="panel-kicker">Datenfluss</p>
+        <dl>
+          <div>
+            <dt>Aufzeichnung</dt>
+            <dd>GPS- und Höhendaten werden während der Tour lokal gespeichert.</dd>
+          </div>
+          <div>
+            <dt>Export</dt>
+            <dd>Die Tourdaten werden als Datei exportiert und bleiben unter Kontrolle des Nutzers.</dd>
+          </div>
+          <div>
+            <dt>Analyse</dt>
+            <dd>Route, Distanz und Dauer werden direkt im Browser visualisiert.</dd>
+          </div>
+          <div>
+            <dt>Kein Cloud-Zwang</dt>
+            <dd>Für die Grundanalyse ist kein Account und kein Upload auf externe Server nötig.</dd>
+          </div>
+        </dl>
       </div>
     </section>
 
@@ -89,17 +129,17 @@
         <p class="eyebrow">Geplante Ausstattung</p>
         <h2>Kompakte Technik für echte Touren</h2>
         <p>
-          Die geplante SoloTrail-Basis kombiniert präzise Positionsdaten, barometrische
-          Höhenmessung und robuste lokale Speicherung. Ziel ist ein schlanker Tracker,
-          der unterwegs unauffällig mitläuft und danach auswertbare Tourdaten liefert.
+          Die SoloTrail-Basis kombiniert Positionsdaten, barometrische Höhenmessung und lokale Speicherung.
+          Ziel ist ein kompakter Tracker, der unterwegs eigenständig aufzeichnet und anschließend
+          strukturierte Tourdaten für Analyse und Visualisierung bereitstellt.
         </p>
       </div>
       <div class="spec-panel">
         <dl>
-          <div><dt>GPS-Tracking</dt><dd>Geplantes NEO-6M Modul für Position, Zeit, Strecke und Geschwindigkeit</dd></div>
-          <div><dt>Höhenprofil</dt><dd>Barometersensor für feinere Höhendaten als reines GPS-Tracking und möglichkeit zur Temperatur/Luftfeuchtigkeitsmessung</dd></div>
+          <div><dt>GPS-Tracking</dt><dd>Geplantes NEO-6M-Modul für Position, Zeit, Strecke und Geschwindigkeit</dd></div>
+          <div><dt>Höhenprofil</dt><dd>Barometrische Höhendaten als Ergänzung zum GPS-Tracking, optional mit weiteren Umgebungswerten</dd></div>
           <div><dt>Lokaler Speicher</dt><dd>CSV-Logs auf MicroSD für einfache Analyse, Archivierung und Import in eigene Tools</dd></div>
-          <div><dt>Direkte Bedienung</dt><dd>Status-LEDs und Tasten für Stromsparende Bedienung ohne App am Weg</dd></div>
+          <div><dt>Direkte Bedienung</dt><dd>Status-LEDs und Tasten für stromsparende Bedienung ohne App am Weg</dd></div>
         </dl>
       </div>
     </section>
@@ -110,10 +150,10 @@
         <h2>Vom Testaufbau zum trailtauglichen Gerät</h2>
       </div>
       <ol class="roadmap">
-        <li>Prototyping: Done</li>
-        <li>Webapp: In Progress</li>
-        <li>First early Adopters: In Progress</li>
-        <li>Finished Produkt: In Planning</li>
+        <li>Prototyping: abgeschlossen</li>
+        <li>Web-App: in Umsetzung</li>
+        <li>Frühe Testnutzer: in Vorbereitung</li>
+        <li>Produktkonzept: in Planung</li>
       </ol>
 
     </section>
