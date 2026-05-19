@@ -115,26 +115,24 @@ a {
 
 .hero {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.86fr);
-  align-items: center;
+  display: flex;
+  align-items: flex-end;
   min-height: calc(100vh - 72px);
   padding: clamp(56px, 8vw, 104px) clamp(20px, 5vw, 72px);
-  gap: clamp(32px, 6vw, 80px);
   overflow: hidden;
   background:
-    linear-gradient(105deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.18) 48%, rgba(217, 232, 239, 0.48)),
-    linear-gradient(180deg, rgba(238, 243, 234, 0), rgba(238, 243, 234, 0.82));
+    linear-gradient(90deg, rgba(247, 248, 243, 0.96) 0%, rgba(247, 248, 243, 0.82) 33%, rgba(247, 248, 243, 0.32) 68%, rgba(23, 33, 29, 0.08) 100%),
+    linear-gradient(180deg, rgba(247, 248, 243, 0.14) 0%, rgba(247, 248, 243, 0.08) 54%, rgba(23, 33, 29, 0.16) 100%),
+    url("../images/solotrail-hero-map.png") center / cover no-repeat;
 }
 
 .hero::before {
   position: absolute;
   inset: auto 0 0;
-  height: 34%;
+  height: 22%;
   content: "";
   background:
-    linear-gradient(165deg, transparent 0 58%, rgba(36, 107, 75, 0.11) 58% 100%),
-    linear-gradient(175deg, transparent 0 66%, rgba(212, 154, 50, 0.11) 66% 100%);
+    linear-gradient(180deg, transparent, rgba(247, 248, 243, 0.92));
   pointer-events: none;
 }
 
@@ -257,339 +255,122 @@ h3 {
   font-weight: 800;
 }
 
-.hero-visual {
+.section {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(64px, 9vw, 116px) clamp(20px, 5vw, 72px);
+  border-top: 1px solid var(--line);
+  background:
+    linear-gradient(90deg, rgba(247, 248, 243, 0.82), rgba(247, 248, 243, 0.62) 44%, rgba(247, 248, 243, 0.36)),
+    linear-gradient(180deg, rgba(247, 248, 243, 0.7), rgba(238, 243, 234, 0.78)),
+    url("../images/solotrail-bg-valley.png") center / cover no-repeat;
+}
+
+.section > * {
   position: relative;
   z-index: 1;
-  min-height: 520px;
-  display: grid;
-  place-items: center;
 }
 
-.trail-card {
-  position: relative;
-  width: min(100%, 520px);
-  aspect-ratio: 1 / 1.08;
-  overflow: hidden;
-  border: 1px solid rgba(23, 33, 29, 0.12);
-  border-radius: 8px;
+.section-heading {
+  max-width: 880px;
+  margin-bottom: 34px;
+}
+
+.section-heading::before {
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin-bottom: 22px;
+  content: "";
+  border-radius: 999px;
+  background: rgba(36, 107, 75, 0.72);
+}
+
+#prototype {
+  background-image:
+    linear-gradient(90deg, rgba(247, 248, 243, 0.8), rgba(247, 248, 243, 0.58) 42%, rgba(247, 248, 243, 0.28)),
+    linear-gradient(180deg, rgba(247, 248, 243, 0.58), rgba(238, 243, 234, 0.72)),
+    url("../images/solotrail-bg-valley.png");
+  background-position: center 46%;
+}
+
+#prototype::before {
+  position: absolute;
+  inset: 0;
+  content: "";
   background:
-    linear-gradient(145deg, rgba(255, 252, 240, 0.96), rgba(232, 239, 223, 0.78)),
-    linear-gradient(35deg, #edf1df, #d9e9df);
-  box-shadow: var(--shadow);
+    radial-gradient(circle at 82% 18%, rgba(255, 255, 255, 0.42), transparent 30%),
+    linear-gradient(120deg, transparent 0 58%, rgba(36, 107, 75, 0.06) 58% 59%, transparent 59% 100%);
+  pointer-events: none;
 }
 
-.trail-card::before {
+#privacy {
+  background-image:
+    linear-gradient(90deg, rgba(247, 248, 243, 0.82), rgba(247, 248, 243, 0.6) 50%, rgba(247, 248, 243, 0.34)),
+    linear-gradient(180deg, rgba(247, 248, 243, 0.62), rgba(238, 243, 234, 0.74)),
+    url("../images/solotrail-bg-topo.png");
+  background-position: center 52%;
+}
+
+#privacy::before,
+#firmware::before,
+#roadmap::before,
+#contact::before {
   position: absolute;
   inset: 0;
   content: "";
   background:
     linear-gradient(rgba(23, 33, 29, 0.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(23, 33, 29, 0.035) 1px, transparent 1px);
-  background-size: 40px 40px, 40px 40px;
+  background-size: 44px 44px;
+  mask-image: linear-gradient(90deg, #000, transparent 68%);
   pointer-events: none;
 }
 
-.map-header {
-  position: absolute;
-  top: 26px;
-  right: 26px;
-  left: 26px;
-  z-index: 3;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 18px;
+#privacy .spec-panel {
+  border-left: 3px solid rgba(90, 168, 200, 0.58);
 }
 
-.map-header div {
-  display: grid;
-  gap: 6px;
+#firmware {
+  background-image:
+    linear-gradient(90deg, rgba(247, 248, 243, 0.8), rgba(247, 248, 243, 0.58) 48%, rgba(247, 248, 243, 0.32)),
+    linear-gradient(180deg, rgba(247, 248, 243, 0.6), rgba(238, 243, 234, 0.72)),
+    url("../images/solotrail-bg-topo.png");
+  background-position: center 58%;
 }
 
-.map-header strong {
-  font-size: clamp(1.3rem, 3vw, 2rem);
-  line-height: 1;
-}
-
-.map-header > span {
-  display: inline-flex;
-  min-height: 36px;
-  align-items: center;
-  padding: 0 12px;
-  border: 1px solid rgba(23, 69, 50, 0.14);
-  border-radius: 999px;
-  color: var(--green-dark);
-  background: rgba(255, 255, 255, 0.68);
-  font-weight: 900;
-}
-
-.map-grid {
-  position: absolute;
-  inset: 86px 26px 128px;
-  border-radius: 8px;
-  background:
-    linear-gradient(180deg, rgba(255, 253, 244, 0.64), rgba(243, 245, 228, 0.28)),
-    #edf2dc;
-  box-shadow:
-    inset 0 0 0 1px rgba(23, 33, 29, 0.11),
-    0 18px 38px rgba(23, 33, 29, 0.07);
-}
-
-.contour-map {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.map-area {
-  opacity: 0.76;
-}
-
-.forest {
-  fill: #cfe0bf;
-}
-
-.meadow {
-  fill: #e4dfb9;
-}
-
-.ridge {
-  fill: #d8cfad;
-  opacity: 0.42;
-}
-
-.river {
-  fill: none;
-  stroke: #5aa8c8;
-  stroke-linecap: round;
-  stroke-width: 7;
-  opacity: 0.78;
-}
-
-.contour {
-  fill: none;
-  stroke: rgba(126, 101, 58, 0.28);
-  stroke-linecap: round;
-  stroke-width: 2;
-}
-
-.contour-soft {
-  stroke: rgba(126, 101, 58, 0.16);
-}
-
-.contour-strong {
-  stroke: rgba(126, 101, 58, 0.38);
-  stroke-width: 2.4;
-}
-
-.trail {
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.trail-main {
-  stroke: rgba(120, 96, 62, 0.58);
-  stroke-dasharray: 12 9;
-  stroke-width: 4;
-}
-
-.trail-secondary {
-  stroke: rgba(120, 96, 62, 0.36);
-  stroke-dasharray: 5 8;
-  stroke-width: 3;
-}
-
-.route-line {
-  fill: none;
-  stroke: #e05b2f;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 8;
-  filter:
-    drop-shadow(0 0 2px rgba(255, 255, 255, 0.95))
-    drop-shadow(0 8px 12px rgba(164, 79, 53, 0.3));
-}
-
-.route-point {
-  fill: var(--green-dark);
-  stroke: #fff;
-  stroke-width: 5;
-}
-
-.route-end {
-  fill: var(--amber);
-}
-
-.route-label {
-  position: absolute;
-  z-index: 2;
-  padding: 4px 7px;
-  border-radius: 999px;
-  color: var(--green-dark);
-  background: rgba(255, 255, 255, 0.72);
-  font-size: 0.68rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  box-shadow: 0 8px 18px rgba(23, 33, 29, 0.08);
-}
-
-.route-label.start {
-  bottom: 20%;
-  left: 15%;
-}
-
-.route-label.end {
-  top: 13%;
-  right: 8%;
-}
-
-.poi {
-  position: absolute;
-  z-index: 2;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 5px 8px;
-  border: 1px solid rgba(23, 33, 29, 0.12);
-  border-radius: 999px;
-  color: #3f4d42;
-  background: rgba(255, 253, 244, 0.82);
-  font-size: 0.7rem;
-  font-weight: 800;
-  box-shadow: 0 8px 18px rgba(23, 33, 29, 0.08);
-}
-
-.poi::before {
-  width: 8px;
-  height: 8px;
-  content: "";
-  border-radius: 50%;
-  background: var(--green);
-}
-
-.poi.hut {
-  top: 34%;
-  left: 31%;
-}
-
-.poi.view {
-  top: 21%;
-  right: 19%;
-}
-
-.poi.spring {
-  right: 31%;
-  bottom: 25%;
-}
-
-.poi.spring::before {
-  background: #5aa8c8;
-}
-
-.poi.view::before {
-  background: var(--amber);
-}
-
-.map-stat {
-  position: absolute;
-  z-index: 2;
-  display: grid;
-  gap: 4px;
-  min-width: 116px;
-  padding: 12px 14px;
-  border: 1px solid rgba(23, 33, 29, 0.1);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.76);
-  box-shadow: 0 14px 28px rgba(23, 33, 29, 0.1);
-  backdrop-filter: blur(10px);
-}
-
-.map-stat span {
-  color: var(--muted);
-  font-size: 0.72rem;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.map-stat strong {
-  color: var(--green-dark);
-  font-size: 1rem;
-}
-
-.map-stat.distance {
-  top: 18px;
-  left: 18px;
-}
-
-.map-stat.altitude {
-  right: 18px;
-  bottom: 18px;
-}
-
-.map-stat.privacy {
-  right: 18px;
-  top: 18px;
-}
-
-.elevation-profile {
-  position: absolute;
-  right: 26px;
-  bottom: 26px;
-  left: 26px;
-  z-index: 3;
-  display: grid;
-  gap: 10px;
-  padding: 16px 18px 14px;
-  border: 1px solid rgba(23, 33, 29, 0.1);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 18px 34px rgba(23, 33, 29, 0.11);
-  backdrop-filter: blur(12px);
-}
-
-.screen-label {
+#firmware .spec-panel .panel-kicker {
   color: var(--green);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
-.elevation-profile > span {
-  color: var(--muted);
-  font-size: 0.72rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+#firmware .spec-panel {
+  border-left: 3px solid rgba(36, 107, 75, 0.58);
 }
 
-.elevation-profile svg {
-  width: 100%;
-  height: 76px;
+#roadmap {
+  background-image:
+    linear-gradient(90deg, rgba(247, 248, 243, 0.82), rgba(247, 248, 243, 0.6) 46%, rgba(247, 248, 243, 0.32)),
+    linear-gradient(180deg, rgba(247, 248, 243, 0.62), rgba(238, 243, 234, 0.74)),
+    url("../images/solotrail-bg-route.png");
+  background-position: center 54%;
 }
 
-.profile-fill {
-  fill: rgba(36, 107, 75, 0.12);
+#contact {
+  background-image:
+    linear-gradient(90deg, rgba(247, 248, 243, 0.82), rgba(247, 248, 243, 0.58) 48%, rgba(247, 248, 243, 0.28)),
+    linear-gradient(180deg, rgba(247, 248, 243, 0.54), rgba(238, 243, 234, 0.68)),
+    url("../images/solotrail-bg-valley.png");
+  background-position: center 72%;
 }
 
-.profile-line {
-  fill: none;
-  stroke: var(--green-dark);
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 4;
+#roadmap .section-heading {
+  max-width: 760px;
 }
 
-.section {
-  padding: clamp(64px, 9vw, 116px) clamp(20px, 5vw, 72px);
-  border-top: 1px solid var(--line);
-}
-
-.section-heading {
-  max-width: 880px;
-  margin-bottom: 34px;
+#roadmap h2 {
+  max-width: 720px;
+  font-size: clamp(1.9rem, 3.6vw, 3.4rem);
+  line-height: 1.06;
 }
 
 .feature-grid {
@@ -601,10 +382,11 @@ h3 {
 .feature-grid article,
 .spec-panel {
   padding: clamp(22px, 3vw, 34px);
-  border: 1px solid rgba(23, 33, 29, 0.1);
+  border: 1px solid rgba(23, 33, 29, 0.09);
   border-radius: 8px;
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.78);
   box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
 }
 
 .feature-grid article {
@@ -619,7 +401,7 @@ h3 {
   left: 0;
   height: 4px;
   content: "";
-  background: linear-gradient(90deg, var(--green), var(--amber));
+  background: linear-gradient(90deg, rgba(36, 107, 75, 0.62), rgba(36, 107, 75, 0.16));
 }
 
 .feature-number {
@@ -637,9 +419,13 @@ h3 {
   align-items: start;
 }
 
+#firmware.split {
+  grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1fr);
+}
+
 .spec-panel {
   background:
-    linear-gradient(180deg, #ffffff, #fbfcf7);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(251, 252, 247, 0.72));
 }
 
 .spec-panel .panel-kicker {
@@ -681,8 +467,9 @@ h3 {
 
 .roadmap {
   display: grid;
-  gap: 12px;
-  max-width: 840px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  max-width: none;
   padding-left: 0;
   list-style: none;
   counter-reset: roadmap;
@@ -690,32 +477,62 @@ h3 {
 
 .roadmap li {
   position: relative;
-  min-height: 56px;
-  padding: 14px 18px 14px 64px;
-  border: 1px solid rgba(23, 33, 29, 0.1);
+  min-height: 168px;
+  padding: 58px 20px 22px;
+  border: 1px solid rgba(23, 33, 29, 0.09);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.72);
-  box-shadow: 0 10px 24px rgba(23, 33, 29, 0.06);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(251, 252, 247, 0.7));
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
   counter-increment: roadmap;
+}
+
+.roadmap li::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  content: "";
+  background: linear-gradient(90deg, rgba(36, 107, 75, 0.62), rgba(36, 107, 75, 0.16));
 }
 
 .roadmap li::before {
   position: absolute;
-  top: 14px;
-  left: 18px;
-  display: grid;
-  width: 30px;
-  height: 30px;
-  place-items: center;
-  border-radius: 50%;
-  color: #fff;
-  content: counter(roadmap);
-  background: var(--green-dark);
-  font-size: 0.82rem;
+  top: 20px;
+  left: 20px;
+  color: var(--green-dark);
+  content: "0" counter(roadmap);
+  font-size: 0.78rem;
   font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.roadmap strong,
+.roadmap span {
+  display: block;
+}
+
+.roadmap strong {
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.roadmap span {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
 }
 
 .site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
   padding: 28px clamp(20px, 5vw, 72px);
   color: var(--muted);
   border-top: 1px solid var(--line);
@@ -723,6 +540,16 @@ h3 {
 
 .site-footer p {
   margin: 0;
+}
+
+.site-footer a {
+  color: var(--green-dark);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--green);
 }
 
 @media (max-width: 860px) {
@@ -734,18 +561,19 @@ h3 {
     padding-bottom: 18px;
   }
 
-  .hero,
   .split,
-  .feature-grid {
+  .feature-grid,
+  .roadmap {
+    grid-template-columns: 1fr;
+  }
+
+  #firmware.split {
     grid-template-columns: 1fr;
   }
 
   .hero {
-    min-height: auto;
-  }
-
-  .hero-visual {
-    min-height: 360px;
+    min-height: 680px;
+    background-position: 58% center;
   }
 }
 
@@ -761,37 +589,7 @@ h3 {
     width: 100%;
   }
 
-  .trail-card {
-    width: 100%;
-  }
-
-  .map-header {
-    top: 20px;
-    right: 20px;
-    left: 20px;
-  }
-
-  .map-grid {
-    inset: 82px 18px 118px;
-  }
-
-  .map-stat {
-    min-width: 98px;
-    padding: 10px 11px;
-  }
-
-  .map-stat strong {
-    font-size: 0.92rem;
-  }
-
-  .elevation-profile {
-    right: 18px;
-    bottom: 18px;
-    left: 18px;
-    padding: 12px 14px 10px;
-  }
-
-  .elevation-profile svg {
-    height: 62px;
+  .roadmap li {
+    min-height: auto;
   }
 }

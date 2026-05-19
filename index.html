@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="SoloTrail entwickelt einen eigenständigen Wander-Tracker für lokale GPS-Aufzeichnung, barometrische Höhendaten und private Touranalyse ohne Smartphone-Zwang.">
-  <title>SoloTrail | Privater Wander-Tracker Prototyp</title>
+  <title>SoloTrail | Privacy by Design Wander-Tracker</title>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -18,14 +18,15 @@
       <a href="#privacy">Privacy</a>
       <a href="#firmware">Firmware</a>
       <a href="#roadmap">Ausblick</a>
+      <a href="#contact">Kontakt</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">Privater Wander-Tracker in Entwicklung</p>
-        <h1 id="hero-title">Wandern ohne Handy-Zwang</h1>
+        <p class="eyebrow">Privacy by Design Wander-Tracker</p>
+        <h1 id="hero-title">Wandern ohne Smartphone</h1>
         <p class="hero-text">
           SoloTrail entwickelt einen eigenständigen GPS-Tracker für Wanderungen. Das Gerät zeichnet Route,
           Höhenmeter und Bewegungsdaten lokal auf — ohne Smartphone-Zwang, ohne Cloud-Konto und ohne
@@ -40,70 +41,6 @@
           <span>Lokal gespeichert</span>
           <span>Ohne Handy beim Tracking</span>
           <span>Tourbereit geplant</span>
-        </div>
-      </div>
-
-      <div class="hero-visual" aria-label="Wanderkarte mit Wegen, Fluss, Beispiel-POIs und hervorgehobener Route">
-        <div class="trail-card">
-          <div class="map-header">
-            <div>
-              <span class="screen-label">SOLOTRAIL LOG</span>
-              <strong>Tourkarte</strong>
-            </div>
-            <span>14,8 km</span>
-          </div>
-
-          <div class="map-grid" aria-hidden="true">
-            <svg class="contour-map" viewBox="0 0 520 520">
-              <path class="map-area forest" d="M0 0H226C208 54 164 86 116 104C68 122 34 162 0 206Z" />
-              <path class="map-area meadow" d="M314 0H520V180C466 168 416 128 388 82C370 52 342 28 314 0Z" />
-              <path class="map-area ridge" d="M0 356C78 308 148 312 222 338C298 366 370 362 520 286V520H0Z" />
-
-              <path class="river" d="M516 44C470 74 446 112 430 150C410 198 364 220 330 244C282 278 284 328 246 360C216 386 160 394 126 432C104 456 84 484 54 520" />
-
-              <path class="contour contour-soft" d="M28 112C92 78 158 66 222 82C292 100 326 154 390 148C438 144 470 116 504 104" />
-              <path class="contour" d="M22 184C86 150 136 134 196 148C270 166 288 226 354 218C424 210 446 166 502 154" />
-              <path class="contour contour-strong" d="M34 258C92 220 154 204 218 224C288 246 314 298 382 284C432 274 458 234 504 224" />
-              <path class="contour" d="M38 334C100 302 160 286 226 306C296 328 318 386 390 372C434 364 470 330 504 318" />
-              <path class="contour contour-soft" d="M72 430C128 398 200 386 272 406C344 426 396 444 468 410" />
-
-              <path class="trail trail-main" d="M18 392C62 360 112 356 154 326C204 290 218 236 266 214C304 196 342 206 376 184C420 154 442 104 506 80" />
-              <path class="trail trail-secondary" d="M76 92C120 136 158 184 202 238C248 294 306 316 376 340C424 356 468 386 506 420" />
-              <path class="trail trail-secondary" d="M32 256C94 254 142 236 192 204C236 174 280 142 338 132" />
-              <path class="trail trail-secondary" d="M138 456C166 398 204 350 250 314C292 280 322 250 348 206" />
-
-              <path class="route-line" d="M86 404C116 356 150 336 180 298C216 252 238 198 286 190C330 184 354 228 382 204C412 178 424 138 472 112" />
-              <circle class="route-point route-start" cx="86" cy="404" r="9" />
-              <circle class="route-point route-end" cx="472" cy="112" r="9" />
-            </svg>
-
-            <span class="route-label start">Start</span>
-            <span class="route-label end">Ziel</span>
-            <span class="poi hut">Hütte</span>
-            <span class="poi view">Aussicht</span>
-            <span class="poi spring">Quelle</span>
-
-            <div class="map-stat distance">
-              <span>Distanz</span>
-              <strong>14,8 km</strong>
-            </div>
-            <div class="map-stat altitude">
-              <span>Höhenmeter</span>
-              <strong>+426 m</strong>
-            </div>
-            <div class="map-stat privacy">
-              <span>Speicher</span>
-              <strong>Lokal</strong>
-            </div>
-          </div>
-
-          <div class="elevation-profile" aria-hidden="true">
-            <span>Profil</span>
-            <svg viewBox="0 0 320 76">
-              <path class="profile-fill" d="M0 62L38 54L74 58L112 34L152 40L190 18L234 26L276 12L320 24V76H0Z" />
-              <path class="profile-line" d="M0 62L38 54L74 58L112 34L152 40L190 18L234 26L276 12L320 24" />
-            </svg>
-          </div>
         </div>
       </div>
     </section>
@@ -159,6 +96,16 @@
     </section>
 
     <section id="firmware" class="section split">
+      <div class="spec-panel">
+        <p class="panel-kicker">Technologie</p>
+        <dl>
+          <div><dt>GPS-Tracking</dt><dd>NEO-6M-Modul für Position, Zeit, Strecke und Geschwindigkeit</dd></div>
+          <div><dt>Höhenprofil</dt><dd>Barometrische Höhendaten als Ergänzung zum GPS-Tracking, mit weiteren Umgebungswerten</dd></div>
+          <div><dt>Lokaler Speicher</dt><dd>CSV-Logs auf MicroSD für einfache Analyse, Archivierung und Import in eigene Tools</dd></div>
+          <div><dt>Direkte Bedienung</dt><dd>Status-LEDs und Tasten für stromsparende Bedienung ohne App am Weg</dd></div>
+          <div><dt>Visualisierung</dt><dd>App die optional die Tourdaten visualisiert und Gerätezustand anzeigt</dd></div>
+        </dl>
+      </div>
       <div>
         <p class="eyebrow">Spezifikationen</p>
         <h2>Kompakte Technik für echte Touren</h2>
@@ -168,33 +115,48 @@
           strukturierte Tourdaten für Analyse und Visualisierung bereitstellt.
         </p>
       </div>
-      <div class="spec-panel">
-        <dl>
-          <div><dt>GPS-Tracking</dt><dd>NEO-6M-Modul für Position, Zeit, Strecke und Geschwindigkeit</dd></div>
-          <div><dt>Höhenprofil</dt><dd>Barometrische Höhendaten als Ergänzung zum GPS-Tracking, mit weiteren Umgebungswerten</dd></div>
-          <div><dt>Lokaler Speicher</dt><dd>CSV-Logs auf MicroSD für einfache Analyse, Archivierung und Import in eigene Tools</dd></div>
-          <div><dt>Direkte Bedienung</dt><dd>Status-LEDs und Tasten für stromsparende Bedienung ohne App am Weg</dd></div>
-          <div><dt>Visualisierung</dt><dd>App die optional die Tourdaten visualisiert und Gerätezustand anzeigt</dd></div>
-        </dl>
-      </div>
     </section>
 
     <section id="roadmap" class="section">
       <div class="section-heading">
-        <p class="eyebrow">Ausblick</p>
-        <h2>Vom Testaufbau zum trailtauglichen Gerät</h2>
+        <p class="eyebrow">ROADMAP</p>
+        <h2>Der Weg zum feldtauglichen SoloTrail-Prototyp</h2>
+        <p>
+          In den nächsten Iterationen validieren wir GPS-Logging, Energieverbrauch und lokale Datenauswertung
+          unter realen Outdoor-Bedingungen.
+        </p>
       </div>
       <ol class="roadmap">
-        <li>Prototyping: abgeschlossen</li>
-        <li>App: in Umsetzung</li>
-        <li>Frühe Testnutzer: in Vorbereitung</li>
+        <li>
+          <strong>Hardware validieren</strong>
+          <span>GPS, Höhendaten, MicroSD-Logging und Energieverbrauch werden unter realen Bedingungen getestet.</span>
+        </li>
+        <li>
+          <strong>Lokale App-Erfahrung entwickeln</strong>
+          <span>Die App zeigt Gerätestatus, Tourdaten und Auswertungen direkt vom Tracker — ohne Cloud-Zwang.</span>
+        </li>
+        <li>
+          <strong>Feldtests durchführen</strong>
+          <span>Echte Testtouren liefern Daten zu Genauigkeit, Laufzeit, Bedienung und nächster Produktiteration.</span>
+        </li>
       </ol>
+    </section>
 
+    <section id="contact" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Contact us</p>
+        <h2>Interesse an SoloTrail?</h2>
+        <p>
+          Für Fragen, Feedback oder frühes Interesse am Prototyp erreichst du uns direkt per E-Mail.
+        </p>
+        <a class="button primary" href="mailto:hello@solotrail.at">hello@solotrail.at</a>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <p>SoloTrail ist ein früher technischer Prototyp und kein zertifiziertes Navigations- oder Sicherheitsgerät.</p>
+    <p><a href="mailto:hello@solotrail.at">hello@solotrail.at</a></p>
   </footer>
 
   <script src="assets/js/main.js"></script>
