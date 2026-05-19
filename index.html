@@ -43,23 +43,35 @@
         </div>
       </div>
 
-      <div class="hero-visual" aria-label="Minimalistische Höhenkarte mit Route und Tourdaten">
+      <div class="hero-visual" aria-label="Wanderkarte mit Wegen, Fluss, Beispiel-POIs und hervorgehobener Route">
         <div class="trail-card">
           <div class="map-header">
             <div>
               <span class="screen-label">SOLOTRAIL LOG</span>
-              <strong>Höhenkarte</strong>
+              <strong>Tourkarte</strong>
             </div>
             <span>14,8 km</span>
           </div>
 
           <div class="map-grid" aria-hidden="true">
             <svg class="contour-map" viewBox="0 0 520 520">
-              <path class="contour contour-soft" d="M38 376C86 332 116 282 182 288C252 294 266 374 334 366C404 358 420 292 486 266" />
-              <path class="contour" d="M34 292C94 250 132 220 194 226C270 234 282 310 350 300C408 292 428 230 486 212" />
-              <path class="contour contour-strong" d="M72 204C136 160 194 144 252 162C318 184 316 236 370 238C420 240 448 198 492 170" />
-              <path class="contour" d="M28 132C92 108 140 84 214 94C278 102 314 138 362 132C414 126 442 88 496 76" />
-              <path class="contour contour-soft" d="M90 442C156 410 216 392 272 408C330 424 362 468 438 444" />
+              <path class="map-area forest" d="M0 0H226C208 54 164 86 116 104C68 122 34 162 0 206Z" />
+              <path class="map-area meadow" d="M314 0H520V180C466 168 416 128 388 82C370 52 342 28 314 0Z" />
+              <path class="map-area ridge" d="M0 356C78 308 148 312 222 338C298 366 370 362 520 286V520H0Z" />
+
+              <path class="river" d="M516 44C470 74 446 112 430 150C410 198 364 220 330 244C282 278 284 328 246 360C216 386 160 394 126 432C104 456 84 484 54 520" />
+
+              <path class="contour contour-soft" d="M28 112C92 78 158 66 222 82C292 100 326 154 390 148C438 144 470 116 504 104" />
+              <path class="contour" d="M22 184C86 150 136 134 196 148C270 166 288 226 354 218C424 210 446 166 502 154" />
+              <path class="contour contour-strong" d="M34 258C92 220 154 204 218 224C288 246 314 298 382 284C432 274 458 234 504 224" />
+              <path class="contour" d="M38 334C100 302 160 286 226 306C296 328 318 386 390 372C434 364 470 330 504 318" />
+              <path class="contour contour-soft" d="M72 430C128 398 200 386 272 406C344 426 396 444 468 410" />
+
+              <path class="trail trail-main" d="M18 392C62 360 112 356 154 326C204 290 218 236 266 214C304 196 342 206 376 184C420 154 442 104 506 80" />
+              <path class="trail trail-secondary" d="M76 92C120 136 158 184 202 238C248 294 306 316 376 340C424 356 468 386 506 420" />
+              <path class="trail trail-secondary" d="M32 256C94 254 142 236 192 204C236 174 280 142 338 132" />
+              <path class="trail trail-secondary" d="M138 456C166 398 204 350 250 314C292 280 322 250 348 206" />
+
               <path class="route-line" d="M86 404C116 356 150 336 180 298C216 252 238 198 286 190C330 184 354 228 382 204C412 178 424 138 472 112" />
               <circle class="route-point route-start" cx="86" cy="404" r="9" />
               <circle class="route-point route-end" cx="472" cy="112" r="9" />
@@ -67,6 +79,9 @@
 
             <span class="route-label start">Start</span>
             <span class="route-label end">Ziel</span>
+            <span class="poi hut">Hütte</span>
+            <span class="poi view">Aussicht</span>
+            <span class="poi spring">Quelle</span>
 
             <div class="map-stat distance">
               <span>Distanz</span>
